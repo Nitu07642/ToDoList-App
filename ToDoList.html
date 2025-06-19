@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="ToDoList.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Advanced To Do List</h1>
+    <div class="todo-box">
+      <input type="text" id="taskInput" placeholder="Task Name">
+      <select id="categoryInput">
+        <option value="">Category</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+        <option value="Others">Others</option>
+      </select>
+      <input type="date" id="deadlineInput">
+      <button onclick="addTask()">Add</button>
+
+      <div class="top-controls">
+        <input type="text" id="searchInput" onkeyup="searchTasks()" placeholder="Search tasks...">
+        <button onclick="toggleMode()">🌗 Toggle Mode</button>
+        <button onclick="clearAllTasks()">🗑 Clear All</button>
+        <button onclick="exportTasks()">⬇ Export</button>
+      </div>
+
+      <div class="stats" id="taskStats"></div>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+
+  <script src="ToDoList.js"></script>
+</body>
+</html>
